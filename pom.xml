@@ -18,6 +18,13 @@
    <version>1.1.6-SNAPSHOT</version>
    <packaging>jar</packaging>
 
+   <scm>
+      <connection>scm:git:git@github.com:william-ferguson-au/wylas-timing-meet-management-interface.git</connection>
+      <developerConnection>scm:git:git@github.com:william-ferguson-au/wylas-timing-meet-management-interface.git</developerConnection>
+      <url>ssh://git@github.com:william-ferguson-au/wylas-timing-meet-management-interface.git</url>
+      <tag>HEAD</tag>
+   </scm>
+
    <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
    </properties>
