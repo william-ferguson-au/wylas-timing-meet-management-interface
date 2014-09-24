@@ -8,11 +8,12 @@
  * Contact support@xandar.com.au for copyright requests.
  */
 
-package au.com.xandar.meetmanager.rest;
+package au.com.xandar.meetmanager;
 
 /**
  * An entry of a single competitor into a race.
  */
+@SuppressWarnings("unused")
 public class RaceEntry {
 
     /**

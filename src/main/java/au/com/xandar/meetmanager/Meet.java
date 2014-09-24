@@ -8,7 +8,7 @@
  * Contact support@xandar.com.au for copyright requests.
  */
 
-package au.com.xandar.meetmanager.rest;
+package au.com.xandar.meetmanager;
 
 /**
  * Resents a Meet within the MeetManagementService.

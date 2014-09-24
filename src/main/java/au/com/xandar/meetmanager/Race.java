@@ -8,7 +8,7 @@
  * Contact support@xandar.com.au for copyright requests.
  */
 
-package au.com.xandar.meetmanager.rest;
+package au.com.xandar.meetmanager;
 
 import java.util.Collections;
 import java.util.List;
@@ -16,6 +16,7 @@ import java.util.List;
 /**
  * A Race as represented within the MeetManagement Service.
  */
+@SuppressWarnings("unused")
 public final class Race {
 
     /**

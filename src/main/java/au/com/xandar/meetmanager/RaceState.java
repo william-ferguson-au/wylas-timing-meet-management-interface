@@ -8,11 +8,12 @@
  * Contact support@xandar.com.au for copyright requests.
  */
 
-package au.com.xandar.meetmanager.rest;
+package au.com.xandar.meetmanager;
 
 /**
  * The various states of a race.
  */
+@SuppressWarnings("unused")
 public enum RaceState {
 
     /**

@@ -8,32 +8,62 @@
  * Contact support@xandar.com.au for copyright requests.
  */
 
-package au.com.xandar.meetmanager.rest;
+package au.com.xandar.meetmanager;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 import java.util.List;
+import java.util.Map;
 
 /**
- * Provides two way access to the MeetManager data necessary for managing timing for a meet.
+ * Provides two way access to the MeetManager data necessary to manage the timing of a meet.
  *
  * Handles Meet related requests in the context of the current loaded Meet.
  *
- * Suggest the MeetManagementService use port 2525 (by default).
- * Further suggest that a standard path be used. Such as 'meetmanager'
- * So requests take the form of http://<host>:<port>/meetmanager/<method>
+ * Implementations of this interfaces will be loaded using {@link java.util.ServiceLoader}.
+ * So they must include a META-INF/services/au.com.xandar.meetmanager.MeetManagerService file
+ * containing the full qualified names of the implementations they support.
  *
- * If an application error occurs then the REST method response should contain HTTP 403 and the body should be a String detailing the problem.
+ * @see http://docs.oracle.com/javase/6/docs/api/index.html?java/util/ServiceLoader.html
+ * @since version 2
  */
-//@Path("/meetmanager")
-@Consumes(MediaType.APPLICATION_JSON)
-@Produces(MediaType.APPLICATION_JSON)
-public interface MeetManagementService {
+@SuppressWarnings("unused")
+public interface MeetManagerService {
+
+    /**
+     * Strongly suggested that {@link java.util.ResourceBundle} be used to ensure that the Service name is provided in the appropriate language.
+     *
+     * @return Name that can be provided for human consumption to differentiate this Service from others.
+     */
+    public String getReadableName();
+
+    /**
+     * @return Map of properties that can be configured for this MeetManagerService along with any defaults.
+     *
+     * @since  version 2
+     */
+    public Map<String, String> getProperties();
+
+    /**
+     * Start this MeetManagerService.
+     *
+     * Prior to this point all methods other than {@link #stop()} and {@link #getProperties()} should throw {@link java.lang.IllegalStateException}
+     *
+     * @since  version 2
+     */
+    public void start();
+
+    /**
+     * Stop this MeetManagerService.
+     *
+     * After this point all methods other than {@link #start()} and {@link #getProperties()} should throw {@link java.lang.IllegalStateException}
+     *
+     * @since  version 2
+     */
+    public void stop();
+
+    /**
+     * @return true if this Service has been started, otherwise false.
+     */
+    public boolean isStarted();
 
     /**
      * Returns the API supported by this version of MeetManagementService.
@@ -43,84 +73,61 @@ public interface MeetManagementService {
      *
      * @return the API supported by this version of MeetManagementService.
      *
-     * @since  version 1
+     * @since  version 2
      */
-    @GET
-    @Path("/api")
     public int getApiVersion();
 
     /**
      * @return List of Meets currently accessible via this MeetManagementService.
      *
-     * @since  version 1
+     * @since  version 2
      */
-    @GET
-    @Path("/meets")
     public List<Meet> getMeets();
 
     /**
      * Return the List of all seeded Races for the Meet.
      *
-     * NB supported by version 1.
-     *
      * @param meetId        Id of the Meet for which to retrieves races.
      * @return List of all seeded Races for the Meet.
      *
-     * @since  version 1
+     * @since  version 2
      */
-    @GET
-    @Path("/meet/{meetId}/races")
-    public List<Race> getRaces(@PathParam("meetId") String meetId);
+    public List<Race> getRaces(String meetId);
 
     /**
      * Returns the List of RaceEntry for the supplied Race.
-     *
-     * NB supported by version 1.
-     *
      *
      * @param meetId            Id of the Meet for which to retrieve entries.
      * @param raceId            Id of the Race for which to retrieve entries.
      * @return List of RaceEntry for the supplied Race.
      *
-     * @since  version 1
+     * @since  version 2
      */
-    @GET
-    @Path("/meet/{meetId}/{raceId}/raceEntries")
-    public List<RaceEntry> getRaceEntries(@PathParam("meetId") String meetId, @PathParam("raceId") String raceId);
+    public List<RaceEntry> getRaceEntries(String meetId, String raceId);
 
     /**
      * Updates the Race with the RaceEntry results and marks it as completed.
-     *
-     * NB supported by version 1.
      *
      * @param meetId            Id of the Meet to update.
      * @param raceId            Id of the Race to update.
      * @param entries           List of RaceEntry to set as the Race results.
      *
-     * @since  version 1
+     * @since  version 2
      */
-    @POST
-    @Path("/meet/{meetId}/{raceId}/raceEntries")
-    public void updateRaceEntries(@PathParam("meetId") String meetId, @PathParam("raceId") String raceId, List<RaceEntry> entries);
+    public void updateRaceEntries(String meetId, String raceId, List<RaceEntry> entries);
 
     /**
      * Notifies the meet manager that the state of the race has changed.
      *
      * The most relevant of these from a meet management perspective is probably the change to {@link RaceState#RaceOver}.
      *
-     * NB supported by version 1.
-     *
      * @param meetId            Id of the Meet to notify.
      * @param raceId            Id of the Race to notify.
-     *
-     * @since  version 1
      * @param state new state for the Race.
      *
-     * @since  version 1
+     * @since  version 2
      */
-    @POST
-    @Path("/meet/{meetId}/{raceId}/raceStateChanged")
-    public void raceStateChanged(@PathParam("meetId") String meetId, @PathParam("raceId") String raceId, RaceState state);
+    public void raceStateChanged(String meetId, String raceId, RaceState state);
 
     /**
      * Returns the List of all disqualification codes that are valid for the given race.
@@ -131,9 +138,7 @@ public interface MeetManagementService {
      * @param raceId            Id of the Race for which to retrieve DQItems.
      * @return List of DQItems that are valid for the given race.
      *
-     * @since  version 1
+     * @since  version 2
      */
-    @GET
-    @Path("/meet/{meetId}/{raceId}/dqItems")
-    public List<DQItem> getDQItems(@PathParam("meetId") String meetId, @PathParam("raceId") String raceId);
+    public List<DQItem> getDQItems(String meetId, String raceId);
 }

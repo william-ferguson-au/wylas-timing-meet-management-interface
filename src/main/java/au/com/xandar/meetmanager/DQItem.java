@@ -8,11 +8,12 @@
  * Contact support@xandar.com.au for copyright requests.
  */
 
-package au.com.xandar.meetmanager.rest;
+package au.com.xandar.meetmanager;
 
 /**
  * Represents a disqualification code, that is a reason for disqualifying a competitor.
  */
+@SuppressWarnings("unused")
 public final class DQItem {
 
     /**

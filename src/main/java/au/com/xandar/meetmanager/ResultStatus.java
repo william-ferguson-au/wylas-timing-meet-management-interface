@@ -8,35 +8,34 @@
  * Contact support@xandar.com.au for copyright requests.
  */
 
-package au.com.xandar.meetmanager.rest;
+package au.com.xandar.meetmanager;
 
 /**
- * Represents the different types of events.
+ * Represents the result of a RaceEntry.
+ *
+ * A valid RaceEntry won't have a ResultStatus.
  */
-public enum EventType {
+@SuppressWarnings("unused")
+public enum ResultStatus {
 
     /**
+     * Disqualified.
+     *
      * @since  version 1
      */
-    Prelim,
+    DQ,
 
     /**
+     * Did not start.
+     *
      * @since  version 1
      */
-    Prelim_SwimOff,
+    DNS,
 
     /**
+     * Did not finish.
+     *
      * @since  version 1
      */
-    Semi,
-
-    /**
-     * @since  version 1
-     */
-    Semi_SwimOff,
-
-    /**
-     * @since  version 1
-     */
-    Final
+    DNF
 }
