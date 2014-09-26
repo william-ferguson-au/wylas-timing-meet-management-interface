@@ -3,7 +3,10 @@
   ~
   ~ Wylas Timing - Meet Management Interface
   ~
-  ~ All Rights Reserved
+  ~ The code of this project may be used in order to implement a MeetManagerService to allow integration
+  ~ between Wylas Timing and the target Meet Manager.
+  ~
+  ~ In all other cases, All Rights Reserved.
   ~ No part of this application may be reproduced, copied, modified or adapted, without the prior written consent
   ~ of the author, unless otherwise indicated for stand-alone materials.
   ~

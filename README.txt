@@ -1,12 +1,13 @@
-wylas-timing-meet-management-interface
-======================================
+Wylas Timing Meet Manager Service interface
+===========================================
 
-This project describes a web service interface by which Wylas Timing 
-(a wireless timing system for swimming, athletics and other sporting events)
-communicates to a Meet Manager application.
+Wylas Timing is a wireless sports timing system for swimming and athletics.
 
-A Meet Manager can enable the integration by implementing this interface at a web service end point.
-Wylas Timing can then be configured to communicate with the end point and hence with the Meet Manager.
+This project describes an interface by which Wylas Timing communicates with a Meet Manager application.
 
-There exist implementations for a number of Meet Managers. 
-Ask your Meet Manager vendor if they do, and if not why not?
+A Meet Manager can enable integration by implementing the MeetManagerService interface and declaring the service to be available using the java.util.ServiceLoader mechanism.
+
+For those Meet Managers that want to communicate via RESTful web services contact support@wylas-timing.com and we can provide a simple example of doing so.
+
+There exist implementations for a number of Meet Managers.
+Ask your Meet Manager vendor if they do, and if not, why not?
