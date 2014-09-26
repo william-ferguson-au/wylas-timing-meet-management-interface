@@ -14,14 +14,14 @@
 
    <groupId>au.com.xandar.wirelesstiming</groupId>
    <artifactId>meet-manager-service</artifactId>
-   <version>2</version>
+   <version>3-SNAPSHOT</version>
    <packaging>jar</packaging>
 
    <scm>
       <connection>scm:git:git@github.com:william-ferguson-au/wylas-timing-meet-management-interface.git</connection>
       <developerConnection>scm:git:git@github.com:william-ferguson-au/wylas-timing-meet-management-interface.git</developerConnection>
       <url>ssh://git@github.com:william-ferguson-au/wylas-timing-meet-management-interface.git</url>
-      <tag>meet-manager-service-2</tag>
+      <tag>HEAD</tag>
    </scm>
 
    <distributionManagement>
