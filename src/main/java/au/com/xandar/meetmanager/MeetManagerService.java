@@ -10,8 +10,8 @@
 
 package au.com.xandar.meetmanager;
 
+import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Provides two way access to the MeetManager data necessary to manage the timing of a meet.
@@ -36,11 +36,13 @@ public interface MeetManagerService {
     public String getReadableName();
 
     /**
+     * Properties are defined as a LinkedHashMap so that each MeetManagerService can define the order in which to present the properties to the user.
+     *
      * @return Map of properties that can be configured for this MeetManagerService along with any defaults.
      *
      * @since  version 2
      */
-    public Map<String, String> getProperties();
+    public LinkedHashMap<String, String> getProperties();
 
     /**
      * Start this MeetManagerService.
