@@ -26,12 +26,18 @@ public final class Meet {
      */
     public String description;
 
+    /**
+     * @since version 4
+     */
+    public int nrLanes;
+
     @Override
     public String toString() {
         final int offset = meetId.length() < 10 ? 0 : meetId.length() - 10;
         return "Meet{" +
                 "meetId='" + meetId.substring(offset) + '\'' +
                 ", description='" + description + '\'' +
+                ", nrLanes=" + nrLanes +
                 '}';
     }
 }
