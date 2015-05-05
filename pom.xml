@@ -12,6 +12,8 @@
 
    <modelVersion>4.0.0</modelVersion>
 
+   <!-- TODO Add Sonatype parent to allow deployment to Maven Central. -->
+
    <groupId>au.com.xandar.wylas.meetmanager</groupId>
    <artifactId>meet-manager-service</artifactId>
    <version>5-SNAPSHOT</version>

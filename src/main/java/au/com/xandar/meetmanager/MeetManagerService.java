@@ -49,6 +49,7 @@ public interface MeetManagerService {
      *
      * Prior to this point all methods other than {@link #stop()} and {@link #getProperties()} should throw {@link java.lang.IllegalStateException}
      *
+     * @throws MMServiceException if this service cannot be started.
      * @since  version 2
      */
     public void start();
