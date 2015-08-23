@@ -37,9 +37,40 @@ public class RaceEntry {
     public String competitorClub;
 
     /**
+     * This is the official time time for this RaceEntry.
      * @since  version 1
      */
     public Integer timeInMillis;
+
+    /**
+     * Any touchpad time that was recorded.
+     * @since  version 5
+     */
+    public Integer padTimeInMillis;
+
+    /**
+     * 1st backup time that was recorded.
+     * @since  version 5
+     */
+    public Integer backup1TimeInMillis;
+
+    /**
+     * 2nd backup time that was recorded.
+     * @since  version 5
+     */
+    public Integer backup2TimeInMillis;
+
+    /**
+     * 3rd backup time that was recorded.
+     * @since  version 5
+     */
+    public Integer backup3TimeInMillis;
+
+    /**
+     * Any manual time that was recorded.
+     * @since  version 5
+     */
+    public Integer manualTimeInMillis;
 
     /**
      * Lap times if they were recorded.

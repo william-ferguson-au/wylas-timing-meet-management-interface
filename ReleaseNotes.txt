@@ -1,0 +1,21 @@
+Version-5 ??-AUG-2015
+---------------------
+Added touchpad, backupTime1, backupTime2, backupTime3, manualTime to RaceEntry.
+
+Version-4 11-NOV-2014
+---------------------
+Added ability to provide number of lanes for a meet.
+
+Version-3 30-SEP-2014
+---------------------
+CHanged groupId top better represent ownership.
+
+Version-2 26-SEP-2014
+---------------------
+Made MeetManagerService#peoprties a LinkedHashMap to allow insertion order.Removed MeetManagerRESTService.
+Removed all dependencies on REST.
+
+Version-1 24-FEB-2014
+---------------------
+Formal release of version 1.
+
