@@ -10,6 +10,8 @@
 
 package au.com.xandar.meetmanager;
 
+import java.util.Arrays;
+
 /**
  * An entry of a single competitor into a race.
  */
@@ -98,4 +100,25 @@ public class RaceEntry {
      * @since  version 1
      */
     public String dqDisplayCode;
+
+    @Override
+    public String toString() {
+        return "RaceEntry{" +
+            "laneNr=" + laneNr +
+            ", competitorId=" + competitorId +
+            ", competitorName='" + competitorName + '\'' +
+            ", competitorClub='" + competitorClub + '\'' +
+            ", timeInMillis=" + timeInMillis +
+            ", padTimeInMillis=" + padTimeInMillis +
+            ", backup1TimeInMillis=" + backup1TimeInMillis +
+            ", backup2TimeInMillis=" + backup2TimeInMillis +
+            ", backup3TimeInMillis=" + backup3TimeInMillis +
+            ", manualTimeInMillis=" + manualTimeInMillis +
+            ", splitsInMillis=" + Arrays.toString(splitsInMillis) +
+            ", position=" + position +
+            ", status=" + status +
+            ", dqItemId='" + dqItemId + '\'' +
+            ", dqDisplayCode='" + dqDisplayCode + '\'' +
+            '}';
+    }
 }
