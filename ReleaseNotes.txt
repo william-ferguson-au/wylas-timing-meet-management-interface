@@ -1,4 +1,8 @@
-Version-5 ??-AUG-2015
+Version-8 09-DEC-2015
+---------------------
+Changed RaceEntry#competitorId from an Integer to a String to provide greater flexibility for MM services.
+
+Version-5 23-AUG-2015
 ---------------------
 Added touchpad, backupTime1, backupTime2, backupTime3, manualTime to RaceEntry.
 
@@ -12,7 +16,7 @@ CHanged groupId top better represent ownership.
 
 Version-2 26-SEP-2014
 ---------------------
-Made MeetManagerService#peoprties a LinkedHashMap to allow insertion order.Removed MeetManagerRESTService.
+Made MeetManagerService#properties a LinkedHashMap to allow insertion order.Removed MeetManagerRESTService.
 Removed all dependencies on REST.
 
 Version-1 24-FEB-2014

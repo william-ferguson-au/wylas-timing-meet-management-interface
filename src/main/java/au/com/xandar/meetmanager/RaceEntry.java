@@ -26,7 +26,7 @@ public class RaceEntry {
     /**
      * @since  version 1
      */
-    public Integer competitorId;
+    public String competitorId;
 
     /**
      * @since  version 1
@@ -39,7 +39,7 @@ public class RaceEntry {
     public String competitorClub;
 
     /**
-     * This is the official time time for this RaceEntry.
+     * This is the official time for this RaceEntry.
      * @since  version 1
      */
     public Integer timeInMillis;
