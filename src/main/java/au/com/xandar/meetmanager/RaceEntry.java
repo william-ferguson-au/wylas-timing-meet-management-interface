@@ -82,9 +82,27 @@ public class RaceEntry {
     public Integer[] splitsInMillis;
 
     /**
+     * Position of this RaceEntry within it's heat.
+     *
      * @since  version 1
+     * @deprecated since version 9. Use {@link #heatPosition} instead.
      */
     public Integer position;
+
+    /**
+     * Position of this RaceEntry within it's heat.
+     * Previously known as {@link #position}.
+     *
+     * @since  version 9
+     */
+    public Integer heatPosition;
+
+    /**
+     * The position of this RaceEntry across all heats of this Event (of the same EventType).
+     *
+     * @since  version 9
+     */
+    public Integer eventPosition;
 
     /**
      * @since  version 1
