@@ -1,4 +1,4 @@
-Version-9
+Version-9 31-DEC-2015
 ---------------------
 Added RaceEntry#heatPosition and RaceEntry#eventPosition and deprecated RaceEntry#position.
 
