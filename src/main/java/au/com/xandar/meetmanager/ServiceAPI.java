@@ -22,6 +22,10 @@ public interface ServiceAPI extends ServiceInfrastructure {
 
     /**
      * @return List of Meets currently accessible via this MeetManagementService.
+     * <p>
+     * <ul>
+     *  <li>The RESTful implementation uses the GET request : <strong>/meets</strong></li>
+     * </ul>
      *
      * @since  version 2
      */
@@ -29,6 +33,10 @@ public interface ServiceAPI extends ServiceInfrastructure {
 
     /**
      * Return the List of all seeded Races for the Meet.
+     * <p>
+     * <ul>
+     *  <li>The RESTful implementation uses the GET request : <strong>/meet/{meetId}/races</strong></li>
+     * </ul>
      *
      * @param meetId        Id of the Meet for which to retrieves races.
      * @return List of all seeded Races for the Meet.
@@ -39,6 +47,10 @@ public interface ServiceAPI extends ServiceInfrastructure {
 
     /**
      * Returns the List of RaceEntry for the supplied Race.
+     * <p>
+     * <ul>
+     *  <li>The RESTful implementation uses the GET request : <strong>/meet/{meetId}/{raceId}/raceEntries</strong></li>
+     * </ul>
      *
      * @param meetId            Id of the Meet for which to retrieve entries.
      * @param raceId            Id of the Race for which to retrieve entries.
@@ -50,6 +62,10 @@ public interface ServiceAPI extends ServiceInfrastructure {
 
     /**
      * Updates the Race with the RaceEntry results and marks it as completed.
+     * <p>
+     * <ul>
+     *  <li>The RESTful implementation uses the POST request : <strong>/meet/{meetId}/{raceId}/raceEntries</strong> with the List of RaceEntry as content</li>
+     * </ul>
      *
      * @param meetId            Id of the Meet to update.
      * @param raceId            Id of the Race to update.
@@ -61,8 +77,13 @@ public interface ServiceAPI extends ServiceInfrastructure {
 
     /**
      * Notifies the meet manager that the state of the race has changed.
-     *
+     * <p>
      * The most relevant of these from a meet management perspective is probably the change to {@link RaceState#RaceOver}.
+     * </p>
+     * <p>
+     * <ul>
+     *  <li>The RESTful implementation uses the POST request : <strong>/meet/{meetId}/{raceId}/raceStateChanged</strong> with the RaceState as content</li>
+     * </ul>
      *
      * @param meetId            Id of the Meet to notify.
      * @param raceId            Id of the Race to notify.
@@ -74,8 +95,10 @@ public interface ServiceAPI extends ServiceInfrastructure {
 
     /**
      * Returns the List of all disqualification codes that are valid for the given race.
-     *
-     * NB supported by version 1.
+     * <p>
+     * <ul>
+     *  <li>The RESTful implementation uses the GET request : <strong>/meet/{meetId}/{raceId}/dqItems</strong></li>
+     * </ul>
      *
      * @param meetId            Id of the Meet for which to retrieve DQItems.
      * @param raceId            Id of the Race for which to retrieve DQItems.
