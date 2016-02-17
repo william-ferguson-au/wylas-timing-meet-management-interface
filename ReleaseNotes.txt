@@ -1,3 +1,7 @@
+Version-10
+----------------------
+Split ServiceAPI and ServiceInfrastructure out of MMService interface.
+
 Version-9 31-DEC-2015
 ---------------------
 Added RaceEntry#heatPosition and RaceEntry#eventPosition and deprecated RaceEntry#position.
