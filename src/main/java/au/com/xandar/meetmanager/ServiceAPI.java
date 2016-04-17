@@ -21,6 +21,11 @@ import java.util.List;
 public interface ServiceAPI extends ServiceInfrastructure {
 
     /**
+     * @return true of the MeetManager service has a connection to the target Meet Manager.
+     */
+    boolean testConnection();
+
+    /**
      * @return List of Meets currently accessible via this MeetManagementService.
      * <p>
      * <ul>
