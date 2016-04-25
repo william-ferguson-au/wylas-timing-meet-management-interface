@@ -14,7 +14,7 @@ package au.com.xandar.meetmanager;
  * Represents the different types of events.
  */
 @SuppressWarnings("unused")
-public enum EventType {
+public enum Round {
 
     /**
      * @since  version 1
@@ -23,6 +23,7 @@ public enum EventType {
 
     /**
      * @since  version 1
+     * @deprecated since version 10 - used {@link Race#eventAlpha} to differentiate instead.
      */
     Prelim_SwimOff,
 
@@ -33,6 +34,7 @@ public enum EventType {
 
     /**
      * @since  version 1
+     * @deprecated since version 10 - used {@link Race#eventAlpha} to differentiate instead.
      */
     Semi_SwimOff,
 
