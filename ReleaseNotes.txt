@@ -1,6 +1,7 @@
-Version-10
+Version-10 25-APR-2016
 ----------------------
 Split ServiceAPI and ServiceInfrastructure out of MMService interface.
+Added extra field to Race and RaceEntry to satisfy HytekUDP interface.
 
 Version-9 31-DEC-2015
 ---------------------
