@@ -1,3 +1,7 @@
+Version-11
+----------------------
+Added #meetSelected(meetId) to notify the MM Adapter that a meet has been selected by the user and to perform any initialisation that it may require.
+
 Version-10 25-APR-2016
 ----------------------
 Split ServiceAPI and ServiceInfrastructure out of MMService interface.
