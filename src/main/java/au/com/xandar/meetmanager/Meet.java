@@ -31,6 +31,10 @@ public final class Meet {
      */
     public int nrLanes;
 
+    // TODO add startDate
+    // TODO add endDate
+    // TODO add course (Short, Long, Yards)
+
     @Override
     public String toString() {
         final int offset = meetId.length() < 10 ? 0 : meetId.length() - 10;
