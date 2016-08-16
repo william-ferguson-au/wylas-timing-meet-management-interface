@@ -40,4 +40,42 @@ public final class DQItem {
         this.displayCode = id;
         this.description = description;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof DQItem)) {
+            return false;
+        }
+
+        DQItem dqItem = (DQItem) o;
+
+        if (!id.equals(dqItem.id)) {
+            return false;
+        }
+        if (!displayCode.equals(dqItem.displayCode)) {
+            return false;
+        }
+        return description.equals(dqItem.description);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id.hashCode();
+        result = 31 * result + displayCode.hashCode();
+        result = 31 * result + description.hashCode();
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "DQItem{" +
+            "id='" + id + '\'' +
+            ", displayCode='" + displayCode + '\'' +
+            ", description='" + description + '\'' +
+            '}';
+    }
 }
