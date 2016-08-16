@@ -37,13 +37,6 @@ public interface ServiceAPI extends ServiceInfrastructure {
     List<Meet> getMeets();
 
     /**
-     * Notifies the MM Adapter that a meet has been selected by the user and allow it to perform any initialisation that it may require.
-     *
-     * @param meetId    Meet that has been seected by the user.
-     */
-    void meetSelected(String meetId);
-
-    /**
      * Return the List of all seeded Races for the Meet.
      * <p>
      * <ul>
