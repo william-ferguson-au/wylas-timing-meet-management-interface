@@ -1,4 +1,4 @@
-Version-12
+Version-12 21-AUG-2016
 ----------------------
 Added expectedNrLanes to Race to allow variation on a race by race basis.
 
