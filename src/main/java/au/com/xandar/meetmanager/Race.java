@@ -109,6 +109,13 @@ public final class Race {
     public Integer expectedNrSplits;
 
     /**
+     * The number of lanes that are available for this race.
+     *
+     * @since 12
+     */
+    public Integer availableNrLanes;
+
+    /**
      * @since  version 1
      */
     public List<RaceEntry> raceEntries = Collections.emptyList();

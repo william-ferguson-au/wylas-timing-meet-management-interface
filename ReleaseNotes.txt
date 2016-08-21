@@ -1,3 +1,7 @@
+Version-12
+----------------------
+Added expectedNrLanes to Race to allow variation on a race by race basis.
+
 Version-11 16-AUG-2016
 ----------------------
 Added identity and toString for DQItem.
