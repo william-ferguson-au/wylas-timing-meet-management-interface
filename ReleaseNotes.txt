@@ -1,3 +1,7 @@
+Version-13 21-AUG-2016
+----------------------
+Fixed typo in Stroke#Breaststroke
+
 Version-12 21-AUG-2016
 ----------------------
 Added expectedNrLanes to Race to allow variation on a race by race basis.

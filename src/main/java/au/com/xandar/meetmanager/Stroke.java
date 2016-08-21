@@ -8,7 +8,7 @@ package au.com.xandar.meetmanager;
 public enum Stroke {
     Butterfly,
     Backstroke,
-    Breatstroke,
+    Breaststroke,
     Freestyle,
     Medley
 }
