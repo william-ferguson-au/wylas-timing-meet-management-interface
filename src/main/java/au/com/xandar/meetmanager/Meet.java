@@ -10,6 +10,8 @@
 
 package au.com.xandar.meetmanager;
 
+import java.util.Date;
+
 /**
  * Resents a Meet within the MeetManagementService.
  */
@@ -30,6 +32,25 @@ public final class Meet {
      * @since version 4
      */
     public int nrLanes;
+
+    /**
+     * First day of the meet.
+     *
+     * @since version 14
+     */
+    public Date startDate;
+
+    /**
+     * Last day of the meet.
+     *
+     * @since version 14
+     */
+    public Date endDate;
+
+    /**
+     * @since version 14
+     */
+    public Course course;
 
     // TODO add startDate
     // TODO add endDate

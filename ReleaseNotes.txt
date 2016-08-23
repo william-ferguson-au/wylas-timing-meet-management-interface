@@ -1,3 +1,10 @@
+Version-14
+----------------------
+Added Course and Gender.
+Added Meet #course, #startDate, #endDate.
+Added strong typing to Race #gender.
+Removed Race #expectedNrSplits.
+
 Version-13 21-AUG-2016
 ----------------------
 Fixed typo in Stroke#Breaststroke

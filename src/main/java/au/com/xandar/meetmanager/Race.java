@@ -74,9 +74,9 @@ public final class Race {
     public RaceState raceState = RaceState.Unmarshalled;
 
     /**
-     * @since 10
+     * @since 14
      */
-    public String gender;
+    public Gender gender;
 
     /**
      * @since 10
@@ -102,11 +102,6 @@ public final class Race {
      * @since 10
      */
     public Boolean relay;
-
-    /**
-     * @since 10
-     */
-    public Integer expectedNrSplits;
 
     /**
      * The number of lanes that are available for this race.
@@ -173,11 +168,6 @@ public final class Race {
         if (relay != null ? !relay.equals(race.relay) : race.relay != null) {
             return false;
         }
-        if (expectedNrSplits != null
-            ? !expectedNrSplits.equals(race.expectedNrSplits)
-            : race.expectedNrSplits != null) {
-            return false;
-        }
         return true;
     }
 
@@ -197,7 +187,6 @@ public final class Race {
         result = 31 * result + (distance != null ? distance.hashCode() : 0);
         result = 31 * result + (stroke != null ? stroke.hashCode() : 0);
         result = 31 * result + (relay != null ? relay.hashCode() : 0);
-        result = 31 * result + (expectedNrSplits != null ? expectedNrSplits.hashCode() : 0);
         return result;
     }
 
@@ -218,7 +207,6 @@ public final class Race {
             ", distance=" + distance +
             ", stroke=" + stroke +
             ", relay=" + relay +
-            ", expectedNrSplits=" + expectedNrSplits +
             '}';
     }
 }
