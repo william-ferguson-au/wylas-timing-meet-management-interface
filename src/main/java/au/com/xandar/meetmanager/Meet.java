@@ -29,9 +29,12 @@ public final class Meet {
     public String description;
 
     /**
+     * Determines the number of lanes shown for a race if the race doesn't explicitly provide a value.
+     * May be null, in which case the system default will be used.
+     *
      * @since version 4
      */
-    public int nrLanes;
+    public Integer nrLanes;
 
     /**
      * First day of the meet.
