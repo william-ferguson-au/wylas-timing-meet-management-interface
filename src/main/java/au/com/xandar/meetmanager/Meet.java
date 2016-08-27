@@ -55,17 +55,18 @@ public final class Meet {
      */
     public Course course;
 
-    // TODO add startDate
-    // TODO add endDate
-    // TODO add course (Short, Long, Yards)
-
     @Override
     public String toString() {
-        final int offset = meetId.length() < 10 ? 0 : meetId.length() - 10;
+        // trim meetId to last 10 characters.
+        final int meetIdOffset = meetId.length() < 10 ? 0 : meetId.length() - 10;
+        final String meetIdToShow = meetId.substring(meetIdOffset);
         return "Meet{" +
-                "meetId='" + meetId.substring(offset) + '\'' +
-                ", description='" + description + '\'' +
-                ", nrLanes=" + nrLanes +
-                '}';
+            "meetId='" + meetIdToShow + '\'' +
+            ", description='" + description + '\'' +
+            ", nrLanes=" + nrLanes +
+            ", startDate=" + startDate +
+            ", endDate=" + endDate +
+            ", course=" + course +
+            '}';
     }
 }
