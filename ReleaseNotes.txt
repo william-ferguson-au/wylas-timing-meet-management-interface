@@ -1,10 +1,14 @@
 Version-14
 ----------------------
 Added Course and Gender.
-Added Meet #course, #startDate, #endDate.
-Relaxed Meet#nrLanes to allow it to be null.
-Added strong typing to Race #gender.
-Removed Race #expectedNrSplits.
+Meet
+  added #course, #startDate, #endDate.
+  added getMeet(meetId)
+  replaced getMeets with getMeetDescriptions
+  relaxed Meet#nrLanes to allow it to be null.
+Race
+  added strong typing to Race #gender.
+  removed #expectedNrSplits.
 
 Version-13 21-AUG-2016
 ----------------------

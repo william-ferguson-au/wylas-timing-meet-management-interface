@@ -33,8 +33,32 @@ public interface ServiceAPI extends ServiceInfrastructure {
      * </ul>
      *
      * @since  version 2
+     * @deprecated version 14 - replaced with {@link #getMeetDescriptions()}
      */
     List<Meet> getMeets();
+
+    /**
+     * @return List of Meets currently accessible via this MeetManagementService.
+     * <p>
+     * <ul>
+     *  <li>The RESTful implementation uses the GET request : <strong>/meetDescriptions</strong></li>
+     * </ul>
+     *
+     * @since  version 14
+     */
+    List<MeetDescription> getMeetDescriptions();
+
+    /**
+     * @param meetId    Identifier of the meet to return.
+     * @return Meets represented by the supplied MeetId.
+     * <p>
+     * <ul>
+     *  <li>The RESTful implementation uses the GET request : <strong>/meet/{meetId}</strong></li>
+     * </ul>
+     *
+     * @since  version 14
+     */
+    Meet getMeet(String meetId);
 
     /**
      * Return the List of all seeded Races for the Meet.
