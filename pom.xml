@@ -16,14 +16,14 @@
 
    <groupId>au.com.xandar.wylas.meetmanager</groupId>
    <artifactId>meet-manager-service</artifactId>
-   <version>14</version>
+   <version>15-SNAPSHOT</version>
    <packaging>jar</packaging>
 
    <scm>
       <connection>scm:git:git@github.com:william-ferguson-au/wylas-timing-meet-management-interface.git</connection>
       <developerConnection>scm:git:git@github.com:william-ferguson-au/wylas-timing-meet-management-interface.git</developerConnection>
       <url>ssh://git@github.com:william-ferguson-au/wylas-timing-meet-management-interface.git</url>
-      <tag>meet-manager-service-14</tag>
+      <tag>HEAD</tag>
    </scm>
 
    <distributionManagement>
