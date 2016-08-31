@@ -60,16 +60,4 @@ public interface ServiceInfrastructure {
      * @return true if this Service has been started, otherwise false.
      */
     boolean isStarted();
-
-    /**
-     * Returns the API supported by this version of MeetManagementService.
-     *
-     * This allows the interface to extended in the future
-     * by giving the client a means of querying for what methods are available.
-     *
-     * @return the API supported by this version of MeetManagementService.
-     *
-     * @since  version 2
-     */
-    int getApiVersion();
 }

@@ -136,4 +136,20 @@ public interface ServiceAPI extends ServiceInfrastructure {
      * @since  version 2
      */
     List<DQItem> getDQItems(String meetId, String raceId);
+
+    /**
+     * Returns the API supported by this version of MeetManagementService.
+     *
+     * This allows the interface to extended in the future
+     * by giving the client a means of querying for what methods the remote MeetManager has made available.
+     * <p>
+     * <ul>
+     *  <li>The RESTful implementation uses the GET request : <strong>/api</strong></li>
+     * </ul>
+     *
+     * @return the API supported by this version of MeetManagementService.
+     *
+     * @since  version 2
+     */
+    int getApiVersion();
 }
