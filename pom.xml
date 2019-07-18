@@ -16,7 +16,7 @@
 
    <groupId>au.com.xandar.wylas.meetmanager</groupId>
    <artifactId>meet-manager-service</artifactId>
-   <version>16-SNAPSHOT</version>
+   <version>15-SNAPSHOT</version>
    <packaging>jar</packaging>
 
    <scm>
