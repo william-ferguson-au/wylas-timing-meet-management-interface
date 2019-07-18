@@ -62,7 +62,15 @@ public class RaceEntry {
     public Boolean exhibitionSwim;
 
     /**
-     * This is the official time for this RaceEntry.
+     * The time provided by the competitor as their entry time for this event.
+     *
+     * @since  version 15
+     */
+    public Integer entryTimeInMillis;
+
+    /**
+     * This is the official result time for this RaceEntry.
+     *
      * @since  version 1
      */
     public Integer timeInMillis;
@@ -180,6 +188,9 @@ public class RaceEntry {
             : entry.competitorClubAbbreviation != null) {
             return false;
         }
+        if (entryTimeInMillis != null ? !entryTimeInMillis.equals(entry.entryTimeInMillis) : entry.entryTimeInMillis != null) {
+            return false;
+        }
         if (timeInMillis != null ? !timeInMillis.equals(entry.timeInMillis) : entry.timeInMillis != null) {
             return false;
         }
@@ -238,6 +249,7 @@ public class RaceEntry {
         result = 31 * result + (competitorLastName != null ? competitorLastName.hashCode() : 0);
         result = 31 * result + (competitorClub != null ? competitorClub.hashCode() : 0);
         result = 31 * result + (competitorClubAbbreviation != null ? competitorClubAbbreviation.hashCode() : 0);
+        result = 31 * result + (entryTimeInMillis != null ? entryTimeInMillis.hashCode() : 0);
         result = 31 * result + (timeInMillis != null ? timeInMillis.hashCode() : 0);
         result = 31 * result + (padTimeInMillis != null ? padTimeInMillis.hashCode() : 0);
         result = 31 * result + (backup1TimeInMillis != null ? backup1TimeInMillis.hashCode() : 0);
@@ -264,6 +276,7 @@ public class RaceEntry {
             ", competitorLastName='" + competitorLastName + '\'' +
             ", competitorClub='" + competitorClub + '\'' +
             ", competitorClubAbbreviation='" + competitorClubAbbreviation + '\'' +
+            ", entryTimeInMillis=" + entryTimeInMillis +
             ", timeInMillis=" + timeInMillis +
             ", padTimeInMillis=" + padTimeInMillis +
             ", backup1TimeInMillis=" + backup1TimeInMillis +
@@ -279,5 +292,4 @@ public class RaceEntry {
             ", dqDisplayCode='" + dqDisplayCode + '\'' +
             '}';
     }
-
 }

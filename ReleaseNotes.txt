@@ -1,3 +1,8 @@
+Version-15 18-JUL-2019
+----------------------
+Added Course#ShortCourseYards
+Added RaceEntry#entryTimeInMillis
+
 Version-14 31-AUG-2016
 ----------------------
 Added Course and Gender.

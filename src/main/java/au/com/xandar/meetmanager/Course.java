@@ -20,13 +20,19 @@ public enum Course {
     /**
      * 50 yards.
      */
-    Yards;
+    LongCourseYards,
+
+    /**
+     * 25 yards.
+     */
+    ShortCourseYards;
 
     public int getDistance() {
         switch (this) {
-            case LongCourse: return 50;
-            case ShortCourse: return 25;
-            case Yards: return 50;
+            case LongCourse:
+            case LongCourseYards: return 50;
+            case ShortCourse:
+            case ShortCourseYards: return 25;
         }
         throw new IllegalStateException("Unknown Course : " + this);
     }
