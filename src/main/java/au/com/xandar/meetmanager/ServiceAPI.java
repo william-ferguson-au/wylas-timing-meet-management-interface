@@ -61,6 +61,16 @@ public interface ServiceAPI extends ServiceInfrastructure {
     Meet getMeet(String meetId);
 
     /**
+     * Generates a canonical identifier for a race that will be understood by and unique to the meet manager.
+     *
+     * @param mmRace    Meet manager race entity.
+     * @return String that uniquely identifies the race or null if it is not possible to generate a canonical identifier.
+     *
+     * @since version 16
+     */
+    String generateForeignRaceKey(Race mmRace);
+
+    /**
      * Return the List of all seeded Races for the Meet.
      * <p>
      * <ul>

@@ -1,3 +1,7 @@
+Version 16
+----------------------
+Added means of generating foreign race Id, to cater fo deck seeding.
+
 Version-15 18-JUL-2019
 ----------------------
 Added Course#ShortCourseYards
