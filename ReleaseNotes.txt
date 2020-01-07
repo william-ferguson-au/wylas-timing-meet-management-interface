@@ -1,6 +1,6 @@
 Version 16 24-DEC-2019
 ----------------------
-Added means of generating foreign race Id, to cater fo deck seeding.
+Added means of generating foreign race Id, to cater for deck seeding.
 
 Version-15 18-JUL-2019
 ----------------------
